@@ -1,0 +1,49 @@
+sort1 uses: Bubble
+How do you know?: big difference between sorted and random implies bubble.
+
+sorted 50000= 6.168s/4.313/5.599
+random 50000=16.260s/16.779/18.019
+big difference between sorted and random implies bubble.
+
+sorted 10000= 0.020s/72/17
+random 10000=0.467s/489/438
+difference again implies bubble
+
+
+sorted 5000= 0.010s/8/16
+random 5000= 0.143s/125/57
+difference again implies bubble
+
+sort2 uses: Merge
+How do you know?: Faster at random so merge.
+
+sorted 50000= 5.232s/4.508/4.709
+random 50000=3.963s/4.865/5.036
+faster at random so merge
+
+sorted 10000= 0.023s/20/17
+random 10000= 0.054s/24/21
+faster at random again so merge
+
+sorted 5000= 0.009s/14/11
+random 5000= 0.010s/13/9
+faster at random again so merge
+
+sort3 uses: Selection
+How do you know?: Slower at random so selection.
+
+sorted 50000= 7.773s/11.163/11.596
+random 50000=8.961s/9.480/7.907
+slower at random so selection
+
+sorted 10000=0.167s/184/228
+random 10000=0.170s/158/167
+slower again so selection
+
+sorted 5000= 0.031s/33/35
+random 5000= 0.035s/34/33
+slower again  so selection
+
+What is interesting here is the fact that selection seems to be noticably faster than bubble, infact at this scale
+the difference between selection and bubble appears to be bigger than the difference between selection and merge
+which is not what i would expect...

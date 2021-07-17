@@ -1,0 +1,15 @@
+get command line argument positive integer
+
+if not specific above reprompt- positive, single, integer
+
+convert string to int
+
+if plus 27 inputted should wrap around
+
+print plaintext: get_string
+
+output ciphertext: with the plaintext rotated by k positions,
+non alphabetical symbols unchanged,
+preserving capitals 
+
+done return 0

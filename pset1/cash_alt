@@ -1,0 +1,48 @@
+# include <stdio.h>
+# include <cs50.h>
+# include <math.h>
+
+int main (void) {
+  
+      //ask for change
+    float c;
+    int i = 0;
+    do
+    {
+        c = get_float("Change owed: \n");
+    }
+    while (c < 0.00);
+    int d = round(c * 100);
+    
+    //check how many quarters can be used
+    for ( ; d >= 25 ;  i++)
+    {
+        d -= 25;
+    }
+          
+          //check how many dimes can be used
+     for ( ; d >= 10 ;  i++)
+           {
+               d -=10;
+           }
+           
+           
+           //check how many nickles can be used
+      for ( ; d >= 5 ;  i++)
+               {
+                   d -= 5;
+               }
+               
+               
+           //check how many pennies can be used
+       for (  ; d >= 1 ; i++)
+       {
+           d -= 1;
+       }
+       
+       //display total ammount of coins used
+     
+        printf("%i\n", i);
+     
+       
+}     
